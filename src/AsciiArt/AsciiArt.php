@@ -44,8 +44,7 @@ class AsciiArt
             }
         }
 
-        echo $output;
-
+        return $output;
     }
 
     public function getImageCharacters()

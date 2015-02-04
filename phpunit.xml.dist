@@ -1,0 +1,37 @@
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.4/phpunit.xsd"
+    bootstrap="vendor/autoload.php"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    forceCoversAnnotation="false"
+    stopOnError="false"
+    stopOnFailure="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false"
+    strict="false"
+    verbose="true">
+
+    <php>
+        <ini name="error_reporting" value="-1" />
+        <ini name="date.timezone" value="UTC" />
+        <!-- Environment variables -->
+        <env name="FIXTURE_IMG_PATH" value="./resources" />
+    </php>
+
+    <testsuites>
+        <testsuite name="ASCIIART Test Suite">
+            <directory>src/tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory>src/AsciiArt</directory>
+        </whitelist>
+    </filter>
+</phpunit>
+<!--
+vim: ft=xml et ts=4 sw=4:
+-->
